@@ -18,19 +18,30 @@
     <div id="root">
         <div class="wrapper">
             <div id="slider">
+
                 <!-- Left arrow container -->
                 <div class="slider-arrows-containers">
                     <i class="fas fa-chevron-circle-left" @click="previousImage"></i>
                 </div>
+
                 <!-- Images container -->
                 <div class="images-only-container">
                     <img :src="images[currentImageIndex].source" :alt="images[currentImageIndex].alt">
                 </div>
+
                 <!-- Right arrow container -->
                 <div class="slider-arrows-containers">
                     <i class="fas fa-chevron-circle-right" @click="nextImage"></i>
                 </div>
             </div>
+
+            <!-- "Thumbnails" -->
+            <nav class="thumbnails">
+                <template v-for="(element,index) in images">
+                    <i class="far fa-dot-circle" v-if="(index != currentImageIndex)" @click="goToImage(index)"></i>
+                    <i class="fas fa-dot-circle" v-else @click="goToImage(index)"></i>
+                </template>
+            </nav>
         </div>
     </div>
 

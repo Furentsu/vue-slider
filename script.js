@@ -43,6 +43,9 @@ const root = new Vue({
             if (this.currentImageIndex > this.images.length - 1) {
                 this.currentImageIndex = 0;
             }
-        } 
+        },
+        goToImage: function(index) {
+            this.currentImageIndex = index;
+        }
     }
 })

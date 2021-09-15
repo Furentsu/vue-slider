@@ -29,9 +29,19 @@
 .images-only-container > img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
 
+.thumbnails {
+    position: absolute;
+    top: 75px;
+}
+
+.thumbnails .far.fa-dot-circle, 
+.thumbnails .fas.fa-dot-circle {
+    font-size: 2.5em;
+    padding: 0 30px;
+}
 
 /* ID */
 #slider {
