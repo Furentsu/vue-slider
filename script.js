@@ -46,6 +46,9 @@ const root = new Vue({
         },
         goToImage: function(index) {
             this.currentImageIndex = index;
-        }
+        },
+    },
+    mounted() {
+        setInterval(this.nextImage, 5000);
     }
 })
