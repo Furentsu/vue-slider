@@ -3,14 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <!-- My stylesheet -->
     <link rel="stylesheet" href="style.css">
+    <!-- Vue JS -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
     <title>Vue Slider</title>
 </head>
 <body>
     
     <div id="root">
-        
+        <div class="wrapper">
+            <div id="slider">
+                <!-- Left arrow container -->
+                <div class="slider-arrows-containers">
+                    <i class="fas fa-chevron-circle-left" @click="previousImage"></i>
+                </div>
+                <!-- Images container -->
+                <div class="images-only-container">
+                    <img :src="images[currentImageIndex].source" :alt="images[currentImageIndex].alt">
+                </div>
+                <!-- Right arrow container -->
+                <div class="slider-arrows-containers">
+                    <i class="fas fa-chevron-circle-right" @click="nextImage"></i>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="script.js"></script>
